@@ -77,12 +77,16 @@ int main()
 			break;
 		case '3':
 			system("cls");
-			cout << "Has elejido Binario-Octal. \n";
+			cout << "Has elejido Binario-Octal. \n"; {
+
+			}
 			pausa();
 			break;
 		case '4':
 			system("cls");
-			cout << "Has elejido Binario-Hexadecimal. \n";
+			cout << "Has elejido Binario-Hexadecimal. \n";{
+
+		}
 			pausa();
 			break;
 		case '5':
