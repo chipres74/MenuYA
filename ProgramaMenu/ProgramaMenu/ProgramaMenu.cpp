@@ -78,7 +78,6 @@ int main()
 		case '3':
 			system("cls");
 			cout << "Has elejido Binario-Octal. \n";
-
 			pausa();
 			break;
 		case '4':
@@ -89,6 +88,46 @@ int main()
 		case '5':
 			system("cls");
 			cout << "Has elejido Texto-Binario. \n";
+
+			{
+				char texto[300];
+				int contador = 0, num, resul, cerosunos[20], i;
+				int clrscr();
+				printf("introduzca un texto para convertirlo a codigo binario:\n");
+				cin >> (texto);
+				while (contador < strlen(texto))
+				{
+					i = 1;
+					num = texto[contador];
+					while (num > 0)
+					{
+						resul = num % 2;
+						if (resul == 0)
+						{
+							cerosunos[i] = 0;
+							i = i + 1;
+						}
+						else
+						{
+							cerosunos[i] = 1;
+							i = i + 1;
+							num = num - 1;
+						}
+						num = num / 2;
+					}
+					i = i - 1;
+					while (i > 0)
+					{
+						printf("%i", cerosunos[i]);
+						i = i - 1;
+					}
+					printf(" ");
+					contador = contador + 1;
+				}
+				getwchar();
+
+				return 0;
+			}
 			pausa();
 			break;
 		case '6':
