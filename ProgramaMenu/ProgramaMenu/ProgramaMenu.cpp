@@ -85,10 +85,27 @@ int main()
 		case '4':
 			system("cls");
 			cout << "Has elejido Binario-Hexadecimal. \n";{
+				
+					char numero[9], temp[2];
+					short potencia[9] = { 1,2,4,8,16,32,64,128 };
+					int i, x, total = 0, decimal[9];
+					cout << ("Escriba un numero binario: ");
+					cin >> ("%s", numero);
+					for (i = 0; numero[i] != '\0'; i++);
+					int limite = i;
+					i--;
+					for (x = 0; x < limite; x++, i--) {
+						temp[0] = numero[i];
+						decimal[x] = atoi(temp);
+						decimal[x] *= potencia[x];
+						total += decimal[x];
+					}
+					printf("resultado en decimal: %d", total);
+					printf("\nresultado en hexadecimal: %x", total);
+			}
+			getwchar();
+			return 0;
 
-		}
-			pausa();
-			break;
 		case '5':
 			system("cls");
 			cout << "Has elejido Texto-Binario. \n";
