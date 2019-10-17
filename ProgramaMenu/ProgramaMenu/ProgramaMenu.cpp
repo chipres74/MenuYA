@@ -22,7 +22,7 @@ int main()
 		cout << "-----------" << endl << endl;
 		cout << "\t1 .- Binario-Decimal" << endl;
 		cout << "\t2 .- Decimal-Binario" << endl;
-		cout << "\t3 .- Binario-Decimal" << endl;
+		cout << "\t3 .- Binario-Octal" << endl;
 		cout << "\t4 .- Binario-Hexadecimal" << endl;
 		cout << "\t5 .- Texto-Binario" << endl;
 		cout << "\t6 .- Salir" << endl;
@@ -77,8 +77,52 @@ int main()
 			break;
 		case '3':
 			system("cls");
-			cout << "Has elejido Binario-Octal. \n"; {
-
+			cout << "Has elejido Binario-Octal. \n";
+			{
+#define ARREGLO_MAX 100
+				string a;
+				int bi[ARREGLO_MAX];
+				int i;
+				int num;
+				string res[ARREGLO_MAX];
+				cout << "Cuantos pares de 3 digitos son?:" << endl;
+				cin >> num;
+				for (i = 1; i <= num; i++) {
+					cout << "Ingresa tres digitos de numeros: " << endl;
+					cin >> bi[i - 1];
+				}
+				for (i = 1; i <= num; i++) {
+					switch (bi[i - 1]) {
+					case 000:
+						res[i - 1] = "0";
+						break;
+					case 001:
+						res[i - 1] = "1";
+						break;
+					case 010:
+						res[i - 1] = "2";
+						break;
+					case 011:
+						res[i - 1] = "3";
+						break;
+					case 100:
+						res[i - 1] = "4";
+						break;
+					case 101:
+						res[i - 1] = "5";
+						break;
+					case 110:
+						res[i - 1] = "6";
+						break;
+					case 111:
+						res[i - 1] = "7";
+						break;
+					}
+				}
+				for (i = 1; i <= num; i++) {
+					a = a + res[i - 1];
+				}
+				cout << a << endl;
 			}
 			pausa();
 			break;
