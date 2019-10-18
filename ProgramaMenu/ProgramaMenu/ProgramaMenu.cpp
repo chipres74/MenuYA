@@ -5,6 +5,9 @@
 #include <iomanip>
 #include <cmath>
 #include <stdio.h>
+#include<vector>
+#include<array>
+#include<string>
 using namespace std;
 void pausa();
 
@@ -178,77 +181,113 @@ int main()
 			system("cls");
 			cout << "Has elejido Binario-Octal. \n";
 			{
-#define ARREGLO_MAX 100
-				string a;
-				int bi[ARREGLO_MAX];
-				int i;
-				int num;
-				string res[ARREGLO_MAX];
-				cout << "Cuantos pares de 3 digitos son?:" << endl;
-				cin >> num;
-				for (i = 1; i <= num; i++) {
-					cout << "Ingresa tres digitos de numeros: " << endl;
-					cin >> bi[i - 1];
-				}
-				for (i = 1; i <= num; i++) {
-					switch (bi[i - 1]) {
-					case 000:
-						res[i - 1] = "0";
-						break;
-					case 001:
-						res[i - 1] = "1";
-						break;
-					case 010:
-						res[i - 1] = "2";
-						break;
-					case 011:
-						res[i - 1] = "3";
-						break;
-					case 100:
-						res[i - 1] = "4";
-						break;
-					case 101:
-						res[i - 1] = "5";
-						break;
-					case 110:
-						res[i - 1] = "6";
-						break;
-					case 111:
-						res[i - 1] = "7";
-						break;
+				int par; string resus, repu;
+				vector <string> bina;
+				vector <string> resul;
+				cout << "¿Cuantos grupos de 3 digitos tiene tu codigo?: ";
+				cin >> par;
+				for (int i = 0; i < par; i++) {
+					cout << i + 1 << ": " << "Ingresa 3 digitos de tu codigo: ";
+					cin >> repu;
+					bina.push_back(repu);
+					if (bina[i] == "000") {
+						resul.push_back("0");
 					}
+					if (bina[i] == "001") {
+						resul.push_back("1");
+					}
+					if (bina[i] == "010") {
+						resul.push_back("2");
+					}
+					if (bina[i] == "011") {
+						resul.push_back("3");
+					}
+
+					if (bina[i] == "100") {
+						resul.push_back("4");
+					}
+					if (bina[i] == "101") {
+						resul.push_back("5");
+					}
+					if (bina[i] == "110") {
+						resul.push_back("6");
+					}
+
+					if (bina[i] == "111") {
+						resul.push_back("7");
+					}
+					resus = resus + resul[i];
 				}
-				for (i = 1; i <= num; i++) {
-					a = a + res[i - 1];
-				}
-				cout <<"El resultado es: " << a << endl;
+				cout << " El codigo Octal es: " << resus<<endl;
 			}
 			pausa();
 			break;
 		case '4':
 			system("cls");
 			cout << "Has elejido Binario-Hexadecimal. \n";{
-				
-					char numero[9], temp[2];
-					short potencia[9] = { 1,2,4,8,16,32,64,128 };
-					int i, x, total = 0, decimal[9];
-					cout << ("Escriba un numero binario: ");
-					cin >> ("%s", numero);
-					for (i = 0; numero[i] != '\0'; i++);
-					int limite = i;
-					i--;
-					for (x = 0; x < limite; x++, i--) {
-						temp[0] = numero[i];
-						decimal[x] = atoi(temp);
-						decimal[x] *= potencia[x];
-						total += decimal[x];
+				int par; string resus, repu;
+				vector <string> bina;
+				vector <string> resul;
+				cout << "¿Cuantos grupos de 4 digitos tiene tu codigo?: ";
+				cin >> par;
+				for (int i = 0; i < par; i++) {
+					cout << i + 1 << ": " << "Ingresa 4 digitos de tu codigo: ";
+					cin >> repu;
+					bina.push_back(repu);
+					if (bina[i] == "0000") {
+						resul.push_back("0");
 					}
-					printf("resultado en decimal: %d", total);
-					printf("\nresultado en hexadecimal: %x", total);
+					if (bina[i] == "0001") {
+						resul.push_back("1");
+					}
+					if (bina[i] == "0010") {
+						resul.push_back("2");
+					}
+					if (bina[i] == "0011") {
+						resul.push_back("3");
+					}
+					if (bina[i] == "0100") {
+						resul.push_back("4");
+					}
+					if (bina[i] == "0101") {
+						resul.push_back("5");
+					}
+					if (bina[i] == "0110") {
+						resul.push_back("6");
+					}
+					if (bina[i] == "0111") {
+						resul.push_back("7");
+					}
+					if (bina[i] == "1000") {
+						resul.push_back("8");
+					}
+					if (bina[i] == "1001") {
+						resul.push_back("9");
+					}
+					if (bina[i] == "1010") {
+						resul.push_back("A");
+					}
+					if (bina[i] == "1011") {
+						resul.push_back("B");
+					}
+					if (bina[i] == "1100") {
+						resul.push_back("C");
+					}
+					if (bina[i] == "1101") {
+						resul.push_back("D");
+					}
+					if (bina[i] == "1110") {
+						resul.push_back("E");
+					}
+					if (bina[i] == "1111") {
+						resul.push_back("F");
+					}
+					resus = resus + resul[i];
+				}
+				cout << " El codigo Hexadecimal es:\n " << resus<<endl;
 			}
-			getwchar();
-			return 0;
-
+			pausa();
+			break;
 		case '5':
 			system("cls");
 			cout << "Has elejido Texto-Binario. \n";
@@ -288,9 +327,6 @@ int main()
 					printf(" ");
 					contador = contador + 1;
 				}
-				getwchar();
-
-				return 0;
 			}
 			pausa();
 			break;
