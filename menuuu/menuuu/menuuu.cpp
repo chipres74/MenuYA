@@ -140,7 +140,9 @@ int main()
 		cout << LIGHT_YELLOWF << BLUE << "--------------------------------------------------------------" DEFAULT0 << endl;
 		cout << LIGHT_MAGENTAF << WHITE << "||                     \t5.- Texto-Binario                   ||" DEFAULT0 << endl;
 		cout << LIGHT_YELLOWF << BLUE << "--------------------------------------------------------------" DEFAULT0 << endl;
-		cout << LIGHT_MAGENTAF << WHITE << "||                     \t6.-" DEFAULT0 << BLACKF << RED " SALIR " DEFAULT0 << LIGHT_MAGENTAF << WHITE << "                          ||" << endl;
+		cout << LIGHT_MAGENTAF << WHITE << "||                     \t6.- Creditos                        ||" DEFAULT0 << endl;
+		cout << LIGHT_YELLOWF << BLUE << "--------------------------------------------------------------" DEFAULT0 << endl;
+		cout << LIGHT_MAGENTAF << WHITE << "||                     \t7.-" DEFAULT0 << BLACKF << RED " SALIR " DEFAULT0 << LIGHT_MAGENTAF << WHITE << "                          ||" << endl;
 		cout << LIGHT_YELLOWF << BLUE << "--------------------------------------------------------------" DEFAULT0 << endl;
 		cout << "Elige una opcion: ";
 		cin >> tecla;
@@ -254,6 +256,8 @@ int main()
 			cout << LIGHT_WHITEF << MAGENTA << "--------------------------------------------------------------" DEFAULT0 << endl;
 			cout << LIGHT_WHITEF << MAGENTA << "|| E L E G I S T E    B I N A R I O - H E X A D E C I M A L ||" << endl;
 			cout << LIGHT_WHITEF << MAGENTA << "--------------------------------------------------------------" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << MAGENTA << "||                                                          ||" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << MAGENTA << "|| " DEFAULT0 << LIGHT_WHITEF << CYAN << "NOTA: Favor de no ingresar mas de 9 digitos." DEFAULT0 << LIGHT_WHITEF << MAGENTA << "             ||" DEFAULT0 << endl;
 			cout << LIGHT_WHITEF << MAGENTA << "||                                                          ||" DEFAULT0 << endl; {
 
 				char numero[9], temp[2];
@@ -276,7 +280,6 @@ int main()
 				printf("|| El resultado en hexadecimal: %x", total);
 				printf("                          ||\n"); printf(DEFAULT0);
 			}
-			getwchar();
 			pausa();
 			break;
 
@@ -328,7 +331,40 @@ int main()
 			pausa();
 			break;
 		case '6':
+			system("cls");
+		{
+			cout << LIGHT_WHITEF << BLUE << "--------------------------------------------------------------" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << BLUE << "||      " DEFAULT0 << LIGHT_WHITEF << RED << "U N I V E R S I D A D     D E     C O L I M A" DEFAULT0 << LIGHT_WHITEF << BLUE << "       ||" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << BLUE << "---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ---" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << BLUE << "||      " DEFAULT0 << LIGHT_WHITEF << RED << "B A C H I L L E R A T O    T E C N I C O   # 8" DEFAULT0 << LIGHT_WHITEF << BLUE << "      ||" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << BLUE << "---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ---" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << BLUE << "||        " DEFAULT0 << LIGHT_WHITEF << RED << "3er   S E M E S T R E   -   G R U P O   B" DEFAULT0 << LIGHT_WHITEF << BLUE << "         ||" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << BLUE << "--------------------------------------------------------------" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << BLUE << "||                                                          ||" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << BLUE << "|| " DEFAULT0 << LIGHT_WHITEF << GREEN << "I N T E G R A N T E S :" DEFAULT0 << LIGHT_WHITEF << BLUE << "                                  ||" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << BLUE << "||                                                          ||" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << BLUE << "||                                                          ||" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << BLUE << "|| X I M E N A   M A N Z O   C A S T R E J O N              ||" << endl;
+			cout << LIGHT_WHITEF << BLUE << "||                                                          ||" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << BLUE << "|| J U A N   P A B L O   C H I P R E S   A R T E A G A      ||" << endl;
+			cout << LIGHT_WHITEF << BLUE << "||                                                          ||" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << BLUE << "|| E M I L I A N O  J A N C A R L O   M E N A   M O L I N A ||" << endl;
+			cout << LIGHT_WHITEF << BLUE << "||                                                          ||" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << BLUE << "|| H E C T O R   J E S U S   H U E R T A   E S C O T O      ||" << endl;
+			cout << LIGHT_WHITEF << BLUE << "||                                                          ||" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << BLUE << "|| C A R L O S R O D O L F O F L O R E S V I L L A L V A Z O||" << endl;
+			cout << LIGHT_WHITEF << BLUE << "||                                                          ||" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << BLUE << "|| M A C K E T Z Y   L O P E Z   C H A V I R A              ||" << endl;
+			cout << LIGHT_WHITEF << BLUE << "||                                                          ||" DEFAULT0 << endl;
+			cout << LIGHT_WHITEF << BLUE << "--------------------------------------------------------------" DEFAULT0 << endl;
+
+		}
+				pausa();
+				break;
+		case '7':
 			bandera = true;
+			getwchar();
+			return 0;
 			// exit(1);
 			break;
 		default:
